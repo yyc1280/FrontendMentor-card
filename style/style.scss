@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  position: relative;
+  font-size: 15px;
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    position: relative;
+
+    overflow: hidden;
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    border-radius: 7px;
+    height: 30vw;
+    width: 80vw;
+    .img {
+      position: relative;
+
+      width: 50%;
+
+      background-image: url("../images/image-header-desktop.jpg");
+      background-size: 100% 100%;
+      z-index: 0;
+
+      .filter {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: hsl(277, 64%, 61%);
+        opacity: 50%;
+        z-index: -1;
+        top: 0;
+      }
+    }
+
+    .text {
+      overflow: auto;
+      padding: 4vw 7vw 4vw 5vw;
+      width: 50%;
+      color: hsl(0, 0%, 100%);
+
+      h1 {
+        margin-bottom: 3vw;
+        span {
+          color: hsl(277, 64%, 61%);
+        }
+      }
+
+      p {
+        color: hsla(0, 0%, 100%, 0.75);
+        margin-bottom: 5vw;
+      }
+
+      .stats {
+        display: flex;
+
+        .stat {
+          margin-right: 1.5rem;
+
+          span {
+            color: hsla(0, 0%, 100%, 0.6);
+            font-family: "Lexend Deca", sans-serif;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    .card {
+      overflow: auto;
+      height: 80%;
+      width: 90vw;
+      flex-direction: column;
+      .text {
+        overflow: visible;
+        text-align: center;
+        order: 2;
+        width: 100%;
+        padding: 30px;
+        h1 {
+          margin-bottom: 20px;
+        }
+        .stats {
+          flex-direction: column;
+          align-items: center;
+          .stat {
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .img {
+        min-height: 260px;
+        order: 1;
+        width: 100%;
+      }
+    }
+  }
+}

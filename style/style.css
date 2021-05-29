@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  position: relative;
+  font-size: 15px;
+  background-color: #090b1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .card {
+  position: relative;
+  overflow: hidden;
+  background-color: #1b1938;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 7px;
+  height: 30vw;
+  width: 80vw;
+}
+
+body .card .img {
+  position: relative;
+  width: 50%;
+  background-image: url("../images/image-header-desktop.jpg");
+  background-size: 100% 100%;
+  z-index: 0;
+}
+
+body .card .img .filter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #aa5cdb;
+  opacity: 50%;
+  z-index: -1;
+  top: 0;
+}
+
+body .card .text {
+  overflow: auto;
+  padding: 4vw 7vw 4vw 5vw;
+  width: 50%;
+  color: white;
+}
+
+body .card .text h1 {
+  margin-bottom: 3vw;
+}
+
+body .card .text h1 span {
+  color: #aa5cdb;
+}
+
+body .card .text p {
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 5vw;
+}
+
+body .card .text .stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .card .text .stats .stat {
+  margin-right: 1.5rem;
+}
+
+body .card .text .stats .stat span {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  body .card {
+    overflow: auto;
+    height: 80%;
+    width: 90vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .card .text {
+    overflow: visible;
+    text-align: center;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+    padding: 30px;
+  }
+  body .card .text h1 {
+    margin-bottom: 20px;
+  }
+  body .card .text .stats {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .card .text .stats .stat {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  body .card .img {
+    min-height: 260px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
